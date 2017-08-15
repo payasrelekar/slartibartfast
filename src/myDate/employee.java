@@ -103,7 +103,7 @@ public class employee {
 	
 	//toString function for initial debugging
 	public String toString( ) {
-		return "Gross Salary for "+this.getName()+" is "+this.getGrossSalary()+" and Net Salary is "+this.getNetSalary();
+		return "Employee ID : "+this.getId()+"\nEmployee Name : "+this.getName()+"\nGross Salary : "+this.getGrossSalary();
 	}
 	
 	//calculate Gross and Final Salary based on basic salary and other benefits
