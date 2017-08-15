@@ -7,6 +7,9 @@ public class employee {
 	private String name;
 	private double basicSalary, hra, medical, pf, pt, netSalary, grossSalary;
 	
+	//static variable for lab exercise-6
+	private static String company = "Douchebag one";
+	
 	//Accessors and Mutators	
 	public int getId() {
 		return id;
@@ -82,6 +85,11 @@ public class employee {
 		this.grossSalary = grossSalary;
 	}
 
+	//for lab exercise-6
+	public static void changeCompany(String newCompany) {
+		employee.company = newCompany;
+	}
+	
 	//constructor : no parameters
 	public employee() {
 		
@@ -124,6 +132,11 @@ public class employee {
 		
 		e2.calculateSalary();
 		System.out.println(e2);
+		
+		//for lab exercise-6
+		System.out.println("Old company is "+employee.company);
+		employee.changeCompany("New Douchery");
+		System.out.println("New company is "+employee.company);
 	}
 
 }
