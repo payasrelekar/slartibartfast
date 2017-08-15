@@ -68,8 +68,8 @@ public class employee {
 		return netSalary;
 	}
 
-	public void setNetSalary(double netSalary) {
-		//this.netSalary = this.getGrossSalary()-(this.getPt()+this.getPf());
+	//private setNetSalary because it shouldn't be changed from outside
+	private void setNetSalary(double netSalary) {
 		this.netSalary = netSalary;
 	}
 
@@ -77,8 +77,8 @@ public class employee {
 		return grossSalary;
 	}
 
-	public void setGrossSalary(double grossSalary) {
-		//this.grossSalary = this.getBasicSalary()+this.getHra()+this.getMedical();
+	//private setGrossSalary, because it shouldn't be changed from outside.
+	private void setGrossSalary(double grossSalary) {
 		this.grossSalary = grossSalary;
 	}
 
@@ -88,10 +88,8 @@ public class employee {
 		setHra(0.5 * basicSalary);
 		setPf(0.12 * basicSalary);
 		setPt(200);
-		//setGrossSalary(this.getBasicSalary()+this.getHra()+this.getMedical());
-		//setNetSalary(this.getGrossSalary()-(this.getPt()+this.getPf()));
 	}
-	//contructor : with parameters
+	//constructor : with parameters
 	public employee(int id, String name, double basicSalary, double medical) {
 		
 		setId(id);
